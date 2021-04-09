@@ -10,3 +10,6 @@ INSERT INTO users ("ID", "UserName", "Parent")
 VALUES(2, 'Budi', 0);
 INSERT INTO users ("ID", "UserName", "Parent")
 VALUES(3, 'Cecep', 1);
+
+SELECT usrChild."ID", usrChild."UserName", usrParent."UserName" FROM users usrChild
+LEFT JOIN users usrParent ON usrChild ."Parent" = usrParent ."ID" ;
