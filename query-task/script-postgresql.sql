@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 INSERT INTO users ("ID", "UserName", "Parent")
-VALUES(1, 'Ali', null);
+VALUES(1, 'Ali', 2);
 INSERT INTO users ("ID", "UserName", "Parent")
-VALUES(2, 'Budi', null);
+VALUES(2, 'Budi', 0);
 INSERT INTO users ("ID", "UserName", "Parent")
-VALUES(3, 'Cecep', null);
+VALUES(3, 'Cecep', 1);
