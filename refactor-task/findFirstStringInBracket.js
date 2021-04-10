@@ -1,8 +1,6 @@
 const getBracketIndex = (str) => {
     let indexOpenBracket = str.indexOf("(")
-    let reversedStr = str.split("").reverse().join("")
-    let indexReversedClosingBracket = reversedStr.indexOf(")")
-    let indexClosingBracket = str.length - indexReversedClosingBracket
+    let indexClosingBracket = str.indexOf(")")
     let isBracketComplete = false
 
     if (indexOpenBracket >= 0 && indexClosingBracket >= 0) {
@@ -13,7 +11,7 @@ const getBracketIndex = (str) => {
         return {
             isBracketComplete: true,
             indexOpenBracket: indexOpenBracket + 1,
-            indexClosingBracket: indexClosingBracket - 2
+            indexClosingBracket: indexClosingBracket - 1
         }
     }
 
@@ -43,4 +41,4 @@ const findFirstStringInBracket = (str) => {
     }
 }
 
-console.log(findFirstStringInBracket("(awa)wefs)"));
+console.log(findFirstStringInBracket("(awaasd)a)wefs)"));
